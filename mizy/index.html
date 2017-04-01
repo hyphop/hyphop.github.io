@@ -1,8 +1,335 @@
-<img src="img/miZy.logo.color.trans.png"/>
-<p>
- tiny fast embeded linux 
-</p>
-<h1>News</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>miZy - Home</title>
 
-<p>We wait first pre release</p>
+<style>
 
+html, body {
+    padding: 0px;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 800px;
+    min-width: 320px;
+    height:100%;
+    font-family: arial;
+    font-size: 18px;
+    color: #000000;
+    background: #666666;
+}
+
+table {
+    font-family: arial;
+    font-size: 16px;
+    color: #000000;
+}
+
+label{
+    font-family: arial;
+    font-size: 18px;
+    border: 0px solid red;
+    display: inline-block;
+    width: 100%;
+}
+
+h1,h2,h3 {
+    font-size: 110%;
+    color: #666666;
+
+}
+
+h2 {
+    font-size: 120%;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+.logo {
+    padding-right: 20px;
+    float: left;
+}
+
+
+.header {
+    padding-top: 20px;
+    border: solid red 0px;
+}
+
+.bottom {
+
+    display: block;
+
+    float: none;
+    clear: both;
+    
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    background: transparent url(data:image/gif;base64,R0lGODlhEAAYAPAAAL6+vgAAACH5BAEAAAEALAAAAAAQABgAAAIbjI+py+0Po5wM2Istyhzsjn2gRpXmiabqyk4FADs=) repeat-x;
+
+}
+
+.date{
+	background: #eee;
+	display: block;
+	padding: 15px;
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+	color: #aaa;
+	font-size: 120%;
+}
+
+    .bottom img {
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+    }
+
+    .bottom div {
+	display: inline-block;
+	min-height: 20px;
+	height: 20px;
+    }
+
+
+a{
+    color: #4186be;
+    text-decoration: none;
+}
+
+.error{
+    color: red;
+}
+
+a:hover {
+    color: #E86402;
+;
+}
+
+/*a:focus:hover {color: lime;}
+a:focus { border-bottom: 2px solid #aaffff;}
+*/
+
+
+h2 b{
+    color: #E86402;
+}
+
+.main{
+    border: solid 1px #fff;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+    min-height:100%; /* real browsers */
+}
+
+.pics2 {
+    padding: 20px;
+}
+
+.pics3 {
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.picsr {
+    padding-right: 20px;
+}
+
+.pics1 {
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.note {
+    margin: 20px;
+    margin-left: 0px;
+    padding-left: 20px;
+    border-left: solid #E86402 4px;
+    
+}
+
+    audio {
+	float:right;
+	width: 240px;
+    }
+
+    .cmd {
+	padding-left: 10px;
+        list-style: none;
+	font-family: monospace;
+	font-size: 80%;
+    }
+
+    .cmd li{
+
+    }
+
+    .cmd li:before {
+	content: "# ";
+	color: #aaffff;
+    }
+
+    pre {
+    padding: 0px;
+/*    white-space: pre-line;
+*/
+    white-space: pre;
+    margin: 0px;
+	font-size: 85%;
+    }
+
+    code {
+	display: block;
+	padding-left: 10px;
+	font-family: monospace;
+	white-space: pre-line;
+	border-left: solid #bebebe 4px;
+	color: #666666;
+    }
+
+
+p {
+    clear: both;
+    padding-bottom: 10px;
+}
+    .nav-bar {
+	display: block;
+	margin-top: 10px;
+    }
+
+    .go-up, .nav-bar a {
+	margin-bottom: 10px;
+        padding: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #666666;
+	text-decoration: none;
+        background: #bebebe;
+	margin-right: 10px;
+	display: inline-block;
+	font-weight: bold;
+	text-transform: capitalize;
+	border-bottom: 2px solid #bebebe;
+    }
+
+    .nav-bar a:active {
+	background: #bebebe;
+        color: #E86402;
+    }
+
+
+    .nav-bar a:hover, .go-up:hover {
+	background: #bebebe;
+        color: #FFFCCC;
+    }
+
+    .nav-bar a:focus, .go-up:focus {
+	 border-bottom: 2px solid #FFFCCC;
+    }
+
+    .nav-bar a:first-letter, .go-up:first-letter {
+	text-decoration: underline;
+    }
+
+    .goto:after {
+	content: " ... >>>";
+    }
+
+    .color1 {
+	color: #E86402;
+    }
+
+    .color2 {
+	color: #A2EBA2;
+    }
+
+    .color3 {
+	color: #968a38;
+    }
+
+    .color4 {
+	color: #414171;
+    }
+
+    .color5 {
+	color: #963c59;
+    }
+
+    .color6 {
+	color: #418179;
+    }
+
+    .color7 {
+	color: #bebebe;
+    }
+
+    .color8 {
+	color: #666666;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+    
+    <div class="header">
+    <a href="/" title="Home page / "><img class="logo" src="img/miZy.wb.logo.2c.png" alt="miZy"/></a>
+    Tiny fast embeded linux
+      <div class="nav-bar">
+	<a href="/cgi-bin/home" title="Home page / " accesskey="h" tabIndex="0">Home</a>
+	<!--
+	<a href="/cgi-bin/status" title="status" accesskey="p" tabIndex="0">Status</a>
+	<a href="/cgi-bin/console" title="status" accesskey="p" tabIndex="0">Console</a>
+	<a href="/cgi-bin/pages" title="Pages / Manuals" accesskey="p" tabIndex="0">Pages</a>
+	<a href="https://hyphop.github.io/mizy/" title="status" accesskey="p" tabIndex="0">News</a>
+	-->
+      </div>
+    </div>
+
+    <a name="content"></a>
+    <h1>miZy news</h1>
+
+    <p><span class=date>01 Apr 17</span> <a href="https://github.com/hyphop/miZy-builder">miZy builder</a> is ready. 
+
+    building machine for miZy system building and other tests 
+
+    </p>
+
+    <p><span class=date>08 Mar 17</span> <a href="https://github.com/hyphop/miZy-linux-kernel">miZy linux kernel</a> is ready. 
+
+    miZy modification linux kernel 3.4.113+ for Orange Pi Zero and other sunxi boards
+
+    </p>
+
+    <p><span class=date>10 Feb 17</span> <a href="https://github.com/hyphop/miZy-uboot">miZy-uboot</a> is ready. 
+
+    Advanced u-boot (for sunxi Orange Pi Zero, another sunxi boards maybe work too ), ready for full load linux from spi-flash, i2c display, FEL mode, and many other improvement
+
+    </p>
+
+    <p><span class=date>17 Jan 17</span> <a href="/">miZy web site started</a>
+    
+    </p>
+
+<div class="bottom">
+<img alt="miZy" src="img/miZy.bw.logo.2c.png"/> ## hyphop ## 2017
+</div></div></body></html>
