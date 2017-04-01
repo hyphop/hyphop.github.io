@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+
+## hyphop ##
+
+BEGIN {
+    our $f = __FILE__;
+    __FILE__ =~ /\/?([^\/]+)$/;
+    our $CWD = $`;
+    unshift @INC, $CWD;
+}
+
+use utils;
+
+open STDERR, ">/dev/null";
+
+print utils::file_inline(shift)
+
+
