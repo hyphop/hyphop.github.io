@@ -1,4 +1,4 @@
-# LINKS
+# ABOUT
 
-[HypHop open-sources pages](https://hyphop.github.io/)
+my published open-sources page [HypHop open-sources pages](https://hyphop.github.io/)
 
