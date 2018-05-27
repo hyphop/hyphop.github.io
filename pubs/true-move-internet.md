@@ -9,4 +9,7 @@
     *900*1975# - 7days  / 4Mbps unlimited Data / 150Bt novat => 161 Bt
     *900*1993# - 30days / 4Mbps unlimited Data / 650Bt novat => 696 Bt
 
+# WEB
+
+    http://192.168.8.1/html/home.html
 
