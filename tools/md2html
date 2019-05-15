@@ -1,0 +1,90 @@
+#!/usr/bin/perl
+
+## hyphop ##
+
+BEGIN {
+    our $f = __FILE__;
+    $f =~ s{^\.\/}{$ENV{PWD}/};
+    $f = readlink $f if -l $f;
+    $f =~ m{[^\/]+$};
+    our $CWD = $`;
+    unshift @INC, $CWD;
+}
+
+use Text::Markdown;
+use Text::MultiMarkdown;
+
+#our $m = Text::Markdown->new;
+our $m = Text::MultiMarkdown->new(
+    heading_ids => 0,
+    img_ids => 0,
+    );
+
+exit unless @ARGV;
+
+our $in = shift // "<&STDIN";
+our $out = shift // ">&STDOUT";
+
+warn "<$in> $out\n";
+
+sub cat {
+    `cat @_`
+}
+
+sub savefile {
+    my $f;
+    my $r = open $f, ">$_[1]";
+    return undef unless $r;
+    my $l = length $_[0];
+    $r = syswrite $f, $_[0], $l;
+    warn "[i] save $_[1] $l bytes\n";
+    return $r;
+}
+
+$_ = cat $in;
+
+$ENV{TITLE}//=$1 if m{#{1,}\s(.+)\n};
+
+warn "[TITLE] $ENV{TITLE}\n";
+
+our $TITLE_SAFE=$ENV{TITLE};
+
+$TITLE_SAFE=~ s/\W+/_/g;
+$TITLE_SAFE=~ s/_$//g;
+$TITLE_SAFE=~ s/^_//g;
+
+print $TITLE_SAFE if $ENV{TITLE_OUT};
+
+s{\b(http(s?)://\S+/(\S+\.(rar|xz|list)))}{[$3]($1)}sgi;
+s{(?<=\s)(http(s?)://\S+)}{[$1]($1)}sgi;
+#s{(?<!\()(http(s?)://\S+)}{[$1]($1)}sgi;
+
+our %names;
+
+sub getnamelink{
+    my $name = lc $_[0];
+    $name =~ s/\W/_/sg;
+    $name =~ s/_+/_/sg;
+    $name =~ s/_$//sg;
+    my $n = $name;
+    my $i=1;
+    while ( $names{$name} ) {
+	$name = $n . '_'. $i++;
+    }
+    $names{$name} = 1;
+    warn "[NAME] $name\n";
+    "<a name='$name'></a>"
+}
+
+s{(\#{2,5}\s+)([^\n]+)}{$1 . getnamelink($2) . $2 }esgi;
+
+$_ = $m->markdown($_);
+
+$_ = cat("$CWD/../tpl/.html.header")
+. $_ .
+cat("$CWD/../tpl/.html.footer");
+
+$_ =~ s{%%(\w+)%%}{$ENV{$1}}sgi;
+
+savefile $_ => $out;
+

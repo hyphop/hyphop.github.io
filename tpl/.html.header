@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>
+%%TITLE%%
+</title>
+    </head>
+
+<style>
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 1024px;
+    min-width: 320px;
+    height:100%;
+    font-family: arial;
+    font-size: 16px;
+    color: #000000;
+    background: #666666;
+}
+
+table {
+    font-family: arial;
+    font-size: 16px;
+    color: #000000;
+}
+
+pro {
+    font-family: arial;
+    font-size: 16px;
+    color: #000000;
+}
+
+label{
+    font-family: arial;
+    font-size: 18px;
+    border: 0px solid red;
+    display: inline-block;
+    width: 100%;
+}
+
+h1,h2,h3 {
+    font-size: 120%;
+    color: #666666;
+
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+.main img {
+    padding: 20px;
+}
+
+a{
+    color: #4186be;
+
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E86402;
+;
+}
+
+h2 b{
+    color: #E86402;
+}
+
+.date{
+	background: #eee;
+	display: block;
+	padding: 10px;
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+	color: #aaa;
+	font-size: 100%;
+	text-align: center;
+}
+
+
+.pro{
+	font-size: 120%;
+}
+
+.main{
+    border: solid 1px #fff;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+    min-height:100%; /* real browsers */
+}
+
+    .cmd {
+	padding-left: 10px;
+        list-style: none;
+	font-family: monospace;
+	font-size: 80%;
+    }
+
+    .cmd li{
+
+    }
+
+    .cmd li:before {
+	content: "# ";
+	color: #aaffff;
+    }
+
+    pre {
+
+    padding: 0px;
+    white-space: pre;
+    margin: 0px;
+	font-size: 85%;
+    }
+
+    code {
+	display: block;
+	padding-left: 10px;
+	font-family: monospace;
+	white-space: pre-line;
+	border-left: solid #bebebe 4px;
+	color: #666666;
+    }
+    .bottom {
+	display: block;
+	border-top: solid #bebebe 1px;
+	color: #666666;
+	padding: 20px;
+    }
+
+</style>
+
+<body>
+<div class="main">

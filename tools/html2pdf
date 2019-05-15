@@ -1,0 +1,35 @@
+#!/usr/bin//perl
+
+use PDF::FromHTML;
+
+my $pdf = PDF::FromHTML->new( encoding => 'utf-8' );
+
+our $FONT_PATH = "/usr/share/fonts/truetype/ttf-dejavu/";
+our $FONT_PATH = "/usr/share/fonts/truetype/msttcorefonts/";
+
+$pdf->load_file(shift);
+
+# Perform the actual conversion:
+$pdf->convert(
+
+    # With PDF::API2, font names such as 'traditional' also works
+    #Font        => "${FONT_PATH}DejaVuSans.ttf",
+    Font       => "${FONT_PATH}arial.ttf",
+    LineHeight => 16,
+
+    #Landscape   => 1,
+    PageWidth      => 640,
+    PageResolution => 540,
+
+    #           FontBold          'HelveticaBold'
+    #           FontOblique       'HelveticaOblique'
+    #           FontBoldOblique   'HelveticaBoldOblique'
+    #           LineHeight        12
+    #           FontUnicode       'Helvetica'
+    #           Font              (same as FontUnicode)
+    PageSize  => 'A4',
+    Landscape => 0,
+
+);
+
+$pdf->write_file(shift);

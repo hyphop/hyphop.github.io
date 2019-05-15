@@ -1,0 +1,18 @@
+#!/bin/sh
+
+## hyphop ##
+DATE=`TZ='UTC' date`
+
+TITLE=`NOW=$DATE TITLE_OUT=1 ../tools/md2html README.md index.html`
+
+echo "[T] $TITLE";
+
+PDF=$TITLE.pdf
+
+wkhtmltopdf --title $TITLE index.html $PDF || \
+    xvfb-run -- wkhtmltopdf wkhtmltopdf --title $TITLE index.html $PDF
+
+#../tools/html2pdf index.html $PDF
+#../tools/html2pdf2 index.html $PDF
+
+

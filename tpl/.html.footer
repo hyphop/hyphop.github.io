@@ -1,0 +1,13 @@
+
+<script>
+ss=document.getElementById("stopspam");
+ss.innerHTML=ss.innerHTML.replace(/\(at\)/, '@').replace(/\(dot\)/, '.');
+</script>
+
+    <div class="bottom">
+    %%NOW%%
+    </div>
+
+<div>
+</body>
+</html>

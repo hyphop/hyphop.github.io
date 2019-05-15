@@ -1,0 +1,20 @@
+#!/usr/bin//perl
+#use common::sense;
+
+use utf8;
+use HTML::HTMLDoc;
+
+my $htmldoc = new HTML::HTMLDoc();
+
+#$htmldoc->set_html_content();
+$htmldoc->set_input_file(shift);
+$htmldoc->set_page_size('a4');
+$htmldoc->links();
+$htmldoc->title();
+$htmldoc->no_embed_fonts();
+$htmldoc->set_charset('utf-8');
+
+my $pdf = $htmldoc->generate_pdf();
+
+#print $pdf->to_string();
+$pdf->to_file(shift);
