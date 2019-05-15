@@ -1,0 +1,12 @@
+#!/bin/sh
+
+## hyphop ##
+
+for i in *.jpg; do
+    echo ""
+    echo $i
+    echo ""
+    ../tools/inline_img $i
+    echo ""
+done
+
