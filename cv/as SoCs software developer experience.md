@@ -1,4 +1,4 @@
-<img style="padding: 20px;" align="right" width=25% src="../pics/hyphop_face.jpg"/>
+<img style="padding: 20px;" align="right" width=25% src="../pics/hyphop_face2.jpg"/>
 ## as SoCs software developer experience
 
 ### [miZy](https://github.com/hyphop/miZy)
@@ -32,7 +32,7 @@ work with full range allwinner h2+ h3 socs
 ### [HardKernel](https://www.hardkernel.com) 
 **2015-2016** as remote community  
 
-+ odroid c1 c2 
++ odroid c2 Amlogic S905 ARM® Cortex®-A53(ARMv8) / c1 Amlogic S805
 + testing compilation linux, uboot, and other open source apps for this boards  
 + make a simple firmware image write/reader/checker and many other shell scripts collection for this boards 
 
@@ -58,7 +58,7 @@ or there https://hyphop.github.io or https://github.com/hyphop or https://stacko
 * Name: Artem Lapkin
 * Location: Moscow RUSSIA / Bangkok THAILAND
 * Phone: ***********
-* Email: <span id="stopspam">mizy.linux(at)gmail(dot)com</span>
+* Email: <span id="stopspam">email2tema(at)gmail(dot)com, mizy.linux(at)gmail(dot)com</span>
 * web: [http://hyphop.github.io](http://hyphop.github.io)
 * CV: [http://hyphop.github.io/cv](http://hyphop.github.io/cv)
 * GitHub: [http://github.com/hyphop](http://github.com/hyphop)
