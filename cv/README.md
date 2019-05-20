@@ -1,1 +1,1 @@
-as SoCs software developer experience.md
+linux_embedded_developer.md
